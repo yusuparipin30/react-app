@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  //dinamic value
+  const title = "welcome to my app";
+  const age = 20;
+  const link = "https://github.com/yusuparipin30/";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <h1>{title}</h1>
+     <h1>{age * 3}</h1>
+     <a href={link}>Go To Github Yusuf</a>
     </div>
   );
 }
