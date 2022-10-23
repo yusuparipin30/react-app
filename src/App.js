@@ -1,7 +1,13 @@
 //untuk menggunakan useState harus mengimport dari react library
-import { useState, useEffect } from "react";
-import Header from "./components/Header"
-import ProductList from "./components/ProductList";
+//import bberapa fungsi dari react router-dom
+//import Header from "./components/Header"
+//import { useState } from "react"
+//import {useEffect } from "react"
+//import ProductList from "./components/ProductList";
+//import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//import About from "./components/About";
+//import Contact from "./components/Contact";
+
 
 
   //1. MEMBUAT EVENT
@@ -85,7 +91,7 @@ import ProductList from "./components/ProductList";
 //   }
 //   //penutup LOOPING 
   
-//   //3.MEMBUAT PROPS (berfungsi mengirimkan data dari komponen induk ke komponen anak)
+//   //4.MEMBUAT PROPS (berfungsi mengirimkan data dari komponen induk ke komponen anak)
 //   //kita juga bisa menggunakan sebagai ivent untuk mengirimkan data dri komponent anak ke komponen induk
 // function App() {
 //   const [products, setProducts] = useState ([
@@ -120,38 +126,92 @@ import ProductList from "./components/ProductList";
     //dari komponen induk ke komponen anak menggunakan PROPS sebagai function
     //penutup PROPS
 
-  //4.USEEFFECT (bermanfaat jika ingin menjalankan suatu perintah atau fungsi setiap kali suatu element atau halaman di render)
-function App() {
-  const [products, setProducts] = useState ([
-    {id:1, title: 'product 1', price: 899},
-    {id:2, title: 'product 2', price: 769},
-    {id:3, title: 'product 3', price: 989},
-    {id:4, title: 'product 4', price: 871},
-    {id:5, title: 'product 5', price: 459}
-  ]);
+    /*5.USEEFFECT (bermanfaat jika ingin menjalankan suatu perintah atau fungsi setiap kali suatu element atau halaman
+     di render*/
+     //useEffect merupakan function yang berjalan setiap kali terdapat perubahan pada DOM.
+  //    function App() {
+  // const [products, setProducts] = useState ([
+  //   {id:1, title: 'product 1', price: 899},
+  //   {id:2, title: 'product 2', price: 769},
+  //   {id:3, title: 'product 3', price: 989},
+  //   {id:4, title: 'product 4', price: 871},
+  //   {id:5, title: 'product 5', price: 459}
+  // ]);
+  //     //membuat fuction deleteProduct
+  //     //tangkap idnya kasih nama yang berbeda productId
+  //     //buat variable baru const newProduct dan gunakan fungsi js yaitu filter untuk mengambil productnya
+  //     //di dalam filter ambil item dari setiap listnya yaitu product.id !==(tidak sama dengan productId)
+  //     //kemudian update useStatenta 
+  //     const deleteProduct = (productId) => {
+  //       const newProducts = products.filter(product => product.id !== productId);
+  //       setProducts(newProducts);
+  //     }
+
+  //     //membuat dependence untuk menjalankan useEffec
+  //     const [name, setName] = useState ('Yusuf');
+
+
+  //     useEffect(() =>{
+  //       console.log('Use Effec Runing')
+  //     },[name]);
+  //      /*pada button buat event onClick yang berfungsi untuk merubah useState ('Yusuf')*/ 
+  //      /* output useStatenya mengunakan paragraf */
+  //     return (
+  //       <div>
+  //         <Header />
+  //         <ProductList products={products} deleteProduct={deleteProduct}/>
+  //         <button onClick={() => setName('Arifin')}>Change Name</button>
+  //         <p>{name}</p>
+  //       </div>
+  //     );
+  //   }
+
+
+     //6.REACT ROUTER
+     /*Berbeda dengan multiple page application pada umumnya, react router tidak melakukan request ke server,
+      melainkan hanya merender komponen di sisi client dengan URL tertentu. */
+    //PETAMA INSTAL REACT-ROUTER-DOM
+    //CEK PADA PACKAGE-LOCK.JSON sudah terinstal apa blm
+    //pertama2 import dan instal beberapa fungsi 
+
+    // function App() {
+    //   const [products, setProducts] = useState([
+    //     {id: 1, title: 'Product 1', price: 899},
+    //     {id: 2, title: 'Product 2', price: 982},
+    //     {id: 3, title: 'Product 3', price: 322},
+    //     {id: 4, title: 'Product 4', price: 763},
+    //     {id: 5, title: 'Product 5', price: 389}
+    //   ]);
      
-      const deleteProduct = (productId) => {
-        const newProducts = products.filter(product => product.id !== productId);
-        setProducts(newProducts);
-      }
+    //   const deleteProduct = (productId) => {
+    //     const newProducts = products.filter(product => product.id !== productId);
+    //     setProducts(newProducts);
+    //   }
 
-      //kita juga bisa menggunakan dependence
-      const [name, setName] = useState ('Yusuf');
-      //gunakan useEffect di sini
-      //di useEffect terdapat erofunction dan didalamnya akan kita console.log
-      // 
-      useEffect (() => {
-        console.log('Use Effect Runing');
-      },[name]);
+    //       //di dalam router gunakan fungsi switch
+    //       //didalam switch gunakan route yang di instal dari react router dom
+    //       //di dalam route terdapat atribut path yaitu url
+    //       //panggil komponen pada saat mengunjungi slash
+    //       //non aktifkan import header karna tidak di butuhkan
+    //       return (
+    //         <div>
+    //           <Router>
+    //             <Switch>
+    //               <Route exact path="/">
+    //                 <ProductList products={ products } deleteProduct={ deleteProduct } />
+    //               </Route>
+    //               <Route path="/about">
+    //                 <About />
+    //               </Route>
+    //               <Route path="/contact">
+    //                 <Contact />
+    //               </Route>
+    //             </Switch>
+    //           </Router>
+    //         </div>
+    //       );
+    //     }
 
-      return (
-        <div>
-          <Header />
-          <ProductList products={products} deleteProduct={deleteProduct}/>
-          <button onClick={() => setName('Arifin')}>Change Nmae</button>
-          <p>{name}</p>
-        </div>
-      );
-    }
+
 
 export default App;

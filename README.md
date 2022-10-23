@@ -1,3 +1,38 @@
+ ### Create React App
+Untuk membuat project react js, dapat dilakukan dengan banyak cara. cara yang paling mudah adalah “create react app”.
+
+Untuk dapat menjalankan perintah “create-react-app”,perlu menginstall node.js di komputer.
+
+mendownload node.js pada link berikut dan install di komputer:
+
+https://nodejs.org/en/
+
+Setelah node.js terinstall di komputer , buka Command Promt atau terminal kemudian ketikkan perintah berikut untuk memastikan node.js terinstall dengan baik di komputer :
+
+
+node -v
+Kemudian ketikan perintah berikut untuk memastikan NPM (Node Package Manager) juga terinstall dengan baik:
+
+
+npm -v
+
+Setelah node.js dan npm terinstall dengan baik di komputer , buat project react baru dengan mengetikan perintah berikut pada command promt atau terminal:
+
+
+npx create-react-app react-app
+
+Perintah diatas akan membuat project react baru bernama “react-app”.
+
+kemudian ketikan perintah berikut pada terminal untuk menjalankan project:
+
+1
+npm start
+
+Kemudian buka browser  dan kunjungi URL berikut:
+
+1
+http://localhost:3000
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
