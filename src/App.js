@@ -213,5 +213,15 @@
     //     }
 
 
+    //7.JSON SERVER
+    //buat file db.json dan isi filenya
+    /*buka terminal baru dan jalankan perintah berikut:
+
+npx json-server --watch db.json --port 8080
+Kembali ke browser dan kunjungi URL berikut:
+
+
+http://localhost:8080/products */
+
 
 export default App;
